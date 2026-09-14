@@ -78,3 +78,73 @@ Projeto/
            ├── reportWebVitals.ts # Métricas de performance do React
            ├── setupTests.ts    # Configuração do ambiente de testes frontend
            └── .gitignore       # Arquivos ignorados pelo Git no frontend
+
+
+           ## 📋 Pré-requisitos e Instalação
+
+### 1. Ferramentas Necessárias
+Antes de rodar a aplicação, certifique-se de ter instalado em sua máquina:
+* **Node.js** (Versão 18 ou superior) — [Baixar Node.js](https://nodejs.org/)
+* **Git** — [Baixar Git](https://git-scm.com/)
+* **SQL Server** e **SSMS** (ou instância ativa do banco de dados) — [Baixar SSMS](https://learn.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms)
+
+---
+
+### 2. Passo a Passo para Baixar e Rodar
+
+. **Clonar o Repositório:**
+   git clone https://github.com/MatheusPestana2/Gest-o-de-Clientes.git
+   cd Gest-o-de-Clientes
+
+
+### 3. Crie o arquivo.env dentro da pasta backend/
+ DB_USER=usuario_app
+DB_PASSWORD=123456
+DB_SERVER=localhost
+DB_NAME=ProjetoComercial
+DB_PORT=1433
+
+### 4. Instalar Dependências e Executar o Backend:
+cd backend
+npm install
+npm run dev
+
+### 5. Instalar Dependências e Executar o Frontend (em outro terminal):
+cd frontend
+npm install
+npm start
+
+🧪 Como Testar a Aplicação
+Siga este roteiro para demonstrar e testar o sistema:
+
+Autenticação e Rota Protegida:
+
+Acesse http://localhost:3000.
+
+Insira um usuário e senha válidos para validar o middleware de rota protegida (PrivateRoute).
+
+Listagem e Detalhes:
+
+Navegue até a tela de Clientes.
+
+Observe a renderização da tabela com nome, documento formatado, e-mail e cargo.
+
+Clique em um cliente para abrir o modal com os dados detalhados (ClienteModalPerfil).
+
+Filtragem Dinâmica:
+
+Digite um nome na barra de busca.
+
+Selecione um valor no filtro por Área ou Cargo para testar a busca combinada em tempo real.
+
+Novo Cadastro e Edição:
+
+Clique em Novo Cliente para abrir o modal (ClienteModalForm).
+
+Preencha os campos de CPF/CNPJ e Telefone para testar a aplicação automática de máscaras.
+
+Salve os dados e veja a tabela atualizar dinamicamente.
+
+Exclusão de Registros:
+
+Teste a remoção de um cliente da lista enviando a requisição DELETE para o servidor.
